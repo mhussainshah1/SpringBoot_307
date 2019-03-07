@@ -2,6 +2,7 @@ package com.example.demo;
 
 import javax.persistence.*;
 
+@Entity
 public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
