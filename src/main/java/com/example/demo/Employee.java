@@ -1,7 +1,8 @@
 package com.example.demo;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
+@Entity
 public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -10,8 +11,8 @@ public class Employee {
     private String name;
     private String ssn;
 
-    @OneToOne(cascade =CascadeType.ALL)
-    @JoinColumn(name ="laptop_id")
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "laptop_id")
     private Laptop laptop;
 
     public Employee() {

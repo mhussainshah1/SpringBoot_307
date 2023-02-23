@@ -1,12 +1,15 @@
 package com.example.demo;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 @Entity
 public class Laptop {
-    @Id@GeneratedValue(strategy = GenerationType.AUTO)
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
+
     private String brand;
+
     private String model;
 
     @OneToOne(mappedBy = "laptop")
